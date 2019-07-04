@@ -1,0 +1,17 @@
+{
+  "name": "landing.mpi",
+  "version": "1.0.0",
+  "description": "Landing page para mpimexico.com",
+  "main": "index.php",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "MPI",
+    "Mexico",
+    "Meeting",
+    "Planners"
+  ],
+  "author": "GreenAfro",
+  "license": "ISC"
+}
