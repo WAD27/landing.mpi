@@ -76,7 +76,8 @@ function php() {
   return (
     gulp
     .src("./**/*.php")
-    // .pipe(gulp.dest("./assets/"))
+    .pipe(plumber())
+    .pipe(gulp.dest("./"))
     .pipe(browsersync.stream())
   )
 }
