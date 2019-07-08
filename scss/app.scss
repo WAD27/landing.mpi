@@ -1,19 +1,136 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:200&display=swap";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 //
 $color_white: #FFF;
 $color_black: #000;
 $color_1: #AE9460;
 $color_2: #6D6E70;
-
+$color-text: #A79BB4;
+//
+$font-content: "Montserrat", sans-serif;
+//
+// wireframe
+// * {outline: 1px solid brown;}
 //
 body {
-
+  font-family: $font-content;
   div {
     height: 100%;
   }
-
-  .ha {
-    height: auto;
+  a {
+    color: $color-1;
+    text-decoration: none;
+    &:hover {
+      color: $color-2;
+      text-decoration: none;
+    }
+  }
+  #heroscreen {
+    height: 100vh;
+    position: relative;
+    .title {
+      position: absolute;
+      bottom: 110px;
+      left: 0;
+      .title-left {
+        color: $color-1;
+        // text-shadow: 5px 74px 18px black;
+        font-weight: bold;
+        margin-bottom: 16px;
+        text-align: right;
+        padding-right: 4px;
+      }
+      .title-right {
+        color: $color-2;
+        font-weight: bold;
+        // text-shadow: 5px 74px 18px black;
+        margin-bottom: 16px;
+        text-align: left;
+        // padding-left: 2px;
+      }
+      p {
+        // font-weight: bold;
+      }
+      .servicio-1 {
+        color: $color-1;
+        font-weight: bold;
+      }
+      .servicio-2 {
+        color: $color-2;
+        font-weight: bold;
+      }
+    }
+  }
+  footer {
+    min-height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 16px;
+    .footer {
+      height: 50px;
+    }
   }
 }
-// General
+//video
+.background-video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  body #heroscreen .title {
+    bottom: 124px;
+  }
+  body #heroscreen .title .title-left {
+    // text-shadow: 5px 143px 25px #000;
+    margin: 0;
+    text-align: center;
+  }
+  body #heroscreen .title .title-right {
+    // text-shadow: 5px 143px 25px #000;
+    margin: 0;
+    text-align: center;
+  }
+  .fullscreen-bg {
+    // background: url('../img/mpi.background.png') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    // display: none;
+  }
+}
+// general
+.ha {
+  height: auto;
+}
+.no-padding {
+  padding: 0;
+}
