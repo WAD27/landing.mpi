@@ -13,5 +13,23 @@
     "Planners"
   ],
   "author": "GreenAfro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.6.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "browser-sync": "^2.26.7",
+    "child_process": "^1.0.2",
+    "cssnano": "^4.1.10",
+    "del": "^5.0.0",
+    "eslint": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "webpack": "^4.35.2",
+    "webpack-stream": "^5.2.1"
+  }
 }
