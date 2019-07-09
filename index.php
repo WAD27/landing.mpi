@@ -36,7 +36,7 @@
 
       <center class="heroscreen-background col-12 ha my-auto">
         <!-- <div class="top col-12"></div> -->
-        <figure class="col-12">
+        <figure class="col-12 imgLiquid imgLiquidNoFill">
           <img src="assets/img/mpi.m.png" alt="Meeting Planners International Logo">
         </figure>
         <div class="title col-12 ha">
@@ -100,6 +100,7 @@
 </footer>
 
 </div>
-<script src="js/app.js"></script>
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="assets/js/app.min.js"></script>
 </body>
 </html>

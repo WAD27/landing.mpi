@@ -29,24 +29,23 @@ body {
     height: 80vh;
     position: relative;
     figure {
-      height:237px;
+      height:160px;
       width: 100%;
       padding: 32px 0;
       margin-bottom: 0;
+      margin-top: 32px;
+      animation-name: logo;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       img {
         height: 100%;
         width: auto;
-        animation-name: logo;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
       }
     }
     .title {
-      // position: absolute;
+      margin-top: 16px;
       display: inline-block;
-      // bottom: 75px;
-      // left: 0;
       .title-left {
         color: $color-1;
         // text-shadow: 5px 74px 18px black;
@@ -86,7 +85,8 @@ body {
       height: 100%;
     }
     .footer {
-      min-height: 35px;
+      min-height: 40px;
+      font-weight: bold;
     }
     .bottom-footer {
       p {
@@ -135,7 +135,7 @@ body {
     position: inherit;
   }
   body #heroscreen {
-    height: 90vh;
+    height: auto;
   }
 }
 @media (max-width: 767px) {//medium
@@ -171,33 +171,31 @@ body {
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes logo {
   0% {
-    transform: translate3d(1px,0px,0px);
+    -webkit-transform: -webkit-translate3d(0px,1px,0px);
     filter: blur(1px);
-    animation-timing-function: ease-in;
   }
   50% {
-    transform: translate3d(-1px,0px,0px);
+    -webkit-transform: -webkit-translate3d(0px,-1px,0px);
     filter: blur(0px);
-    animation-timing-function: ease-out;
   }
   100% {
-    transform: translate3d(0px,0px,0px);
+    -webkit-transform: -webkit-translate3d(0px,1px,0px);
     filter: blur(0px);
   }
 }
 @keyframes logo {
   0% {
-    transform: translate3d(1px,0px,0px);
+    transform: translate3d(0px,1px,0px);
     filter: blur(1px);
     animation-timing-function: ease-in;
   }
   50% {
-    transform: translate3d(-1px,0px,0px);
+    transform: translate3d(0px,-1px,0px);
     filter: blur(0px);
     animation-timing-function: ease-out;
   }
   100% {
-    transform: translate3d(0px,0px,0px);
+    transform: translate3d(0px,1px,0px);
     filter: blur(0px);
   }
 }

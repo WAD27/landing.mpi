@@ -15,6 +15,7 @@ const sass = require("gulp-sass")
 const webpack = require("webpack")
 const webpackconfig = require("./webpack.config.js")
 const webpackstream = require("webpack-stream")
+const order = require("gulp-order");
 //
 function browserSync(done) {
   browsersync.init({
@@ -45,14 +46,14 @@ function css() {
     .pipe(browsersync.stream())
   )
 
-}
+} 
 //
 function scriptsLint() {
   return gulp
   .src(["./js/**/*", "./gulpfile.js"])
   .pipe(plumber())
   .pipe(eslint({
-      config: '.eslintrc.js'
+    config: '.eslintrc.js'
   }))
   .pipe(eslint.format())
   .pipe(eslint.failAfterError());
