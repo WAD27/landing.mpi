@@ -36,9 +36,11 @@
 
       <center class="heroscreen-background col-12 ha my-auto">
         <!-- <div class="top col-12"></div> -->
-        <figure class="col-12 imgLiquid imgLiquidNoFill">
-          <img src="assets/img/mpi.m.png" alt="Meeting Planners International Logo">
-        </figure>
+        <div id="background-image" class="col-12">
+          <figure class="col-12 imgLiquid imgLiquidNoFill">
+            <img src="assets/img/mpi.m.png" alt="Meeting Planners International Logo">
+          </figure>
+        </div>
         <div class="title col-12 ha">
           <div class="row">
             <h2 class="title-left col-12 col-md-6">MEETING</h2>

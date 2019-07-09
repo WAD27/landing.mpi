@@ -28,19 +28,27 @@ body {
   #heroscreen {
     height: 80vh;
     position: relative;
-    figure {
-      height:160px;
-      width: 100%;
-      padding: 32px 0;
-      margin-bottom: 0;
-      margin-top: 32px;
-      animation-name: logo;
-      animation-duration: 3s;
+    #background-image {
+      animation-name: blur;
+      animation-duration: 8s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      img {
-        height: 100%;
-        width: auto;
+      animation-timing-function: ease-in-out;
+      figure {
+        height:160px;
+        width: 100%;
+        padding: 32px 0;
+        margin-bottom: 0;
+        margin-top: 32px;
+        animation-name: mov;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        img {
+          height: 100%;
+          width: auto;
+        }
       }
     }
     .title {
@@ -168,34 +176,62 @@ body {
   padding: 16px;
 }
 // Animation
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes logo {
+@-webkit-keyframes mov {/* Safari 4.0 - 8.0 */
   0% {
-    -webkit-transform: -webkit-translate3d(0px,1px,0px);
-    filter: blur(1px);
-  }
-  50% {
-    -webkit-transform: -webkit-translate3d(0px,-1px,0px);
-    filter: blur(0px);
+    -webkit-transform: translate3d(0px,-1px,0px);
+    -moz-transform: translate3d(0px,-1px,0px);
+    -ms-transform: translate3d(0px,-1px,0px);
+    -o-transform: translate3d(0px,-1px,0px);
   }
   100% {
-    -webkit-transform: -webkit-translate3d(0px,1px,0px);
-    filter: blur(0px);
+    -webkit-transform: translate3d(0px,1px,0px);
+    -moz-transform: translate3d(0px,1px,0px);
+    -ms-transform: translate3d(0px,1px,0px);
+    -o-transform: translate3d(0px,1px,0px);
   }
 }
-@keyframes logo {
+@keyframes mov {
   0% {
-    transform: translate3d(0px,1px,0px);
-    filter: blur(1px);
-    animation-timing-function: ease-in;
-  }
-  50% {
     transform: translate3d(0px,-1px,0px);
-    filter: blur(0px);
-    animation-timing-function: ease-out;
   }
   100% {
     transform: translate3d(0px,1px,0px);
+  }
+}
+@-webkit-keyframes blur {
+  0% {
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
+    -o-filter: blur(1px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+  }
+}
+@keyframes blur {
+  0% {
+    filter: blur(0px);
+  }
+  2% {
+    filter: blur(1px);
+  }
+  25% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(0px);
+  }
+  55% {
+    filter: blur(1px);
+  }
+  57% {
+    filter: blur(0px);
+  }
+  100% {
     filter: blur(0px);
   }
 }
