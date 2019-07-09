@@ -9497,25 +9497,28 @@ body a:hover {
 }
 
 body #heroscreen {
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 
 body #heroscreen figure {
-  height: 200px;
+  height: 237px;
   width: 100%;
-  padding: 32px;
+  padding: 32px 0;
+  margin-bottom: 0;
 }
 
 body #heroscreen figure img {
   height: 100%;
   width: auto;
+  animation-name: logo;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 body #heroscreen .title {
-  position: absolute;
-  bottom: 67px;
-  left: 0;
+  display: inline-block;
 }
 
 body #heroscreen .title .title-left {
@@ -9523,7 +9526,7 @@ body #heroscreen .title .title-left {
   font-weight: bold;
   margin-bottom: 16px;
   text-align: right;
-  padding-right: 4px;
+  padding-right: 16px;
 }
 
 body #heroscreen .title .title-right {
@@ -9531,6 +9534,7 @@ body #heroscreen .title .title-right {
   font-weight: bold;
   margin-bottom: 16px;
   text-align: left;
+  padding-left: 0px;
 }
 
 body #heroscreen .title .servicio-1 {
@@ -9548,11 +9552,19 @@ body footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+body footer .row {
+  height: 100%;
 }
 
 body footer .footer {
-  height: 50px;
+  min-height: 35px;
+}
+
+body footer .bottom-footer p {
+  margin: 0;
 }
 
 .background-video {
@@ -9587,10 +9599,20 @@ body footer .footer {
   }
 }
 
-@media (max-width: 767px) {
-  body #heroscreen .title {
-    bottom: 124px;
+@media (max-width: 992px) {
+  .mt-auto,
+  .my-auto {
+    margin-top: 0 !important;
   }
+  body footer {
+    position: inherit;
+  }
+  body #heroscreen {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 767px) {
   body #heroscreen .title .title-left {
     margin: 0;
     text-align: center;
@@ -9598,10 +9620,6 @@ body footer .footer {
   body #heroscreen .title .title-right {
     margin: 0;
     text-align: center;
-  }
-  .mt-auto,
-  .my-auto {
-    margin-top: 0 !important;
   }
 }
 
@@ -9615,4 +9633,31 @@ body footer .footer {
 
 .top {
   padding: 16px;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes logo {
+  0% {
+    transform: translate3d(2px, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  animation-timing-function: linear;
+}
+
+@keyframes logo {
+  0% {
+    transform: translate3d(2px, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  animation-timing-function: linear;
 }

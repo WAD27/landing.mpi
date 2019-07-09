@@ -26,29 +26,34 @@ body {
     }
   }
   #heroscreen {
-    height: 100vh;
+    height: 80vh;
     position: relative;
     figure {
-      height:200px;
+      height:237px;
       width: 100%;
-      // margin: 0 auto;
-      padding: 32px;
+      padding: 32px 0;
+      margin-bottom: 0;
       img {
         height: 100%;
         width: auto;
+        animation-name: logo;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
     }
     .title {
-      position: absolute;
-      bottom: 67px;
-      left: 0;
+      // position: absolute;
+      display: inline-block;
+      // bottom: 75px;
+      // left: 0;
       .title-left {
         color: $color-1;
         // text-shadow: 5px 74px 18px black;
         font-weight: bold;
         margin-bottom: 16px;
         text-align: right;
-        padding-right: 4px;
+        padding-right: 16px;
       }
       .title-right {
         color: $color-2;
@@ -56,7 +61,7 @@ body {
         // text-shadow: 5px 74px 18px black;
         margin-bottom: 16px;
         text-align: left;
-        // padding-left: 2px;
+        padding-left: 0px;
       }
       p {
         // font-weight: bold;
@@ -76,9 +81,17 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
+    .row {
+      height: 100%;
+    }
     .footer {
-      height: 50px;
+      min-height: 35px;
+    }
+    .bottom-footer {
+      p {
+        margin: 0;
+      }
     }
   }
 }
@@ -114,11 +127,18 @@ body {
     left: -100%;
   }
 }
-
-@media (max-width: 767px) {//medium
-  body #heroscreen .title {
-    bottom: 124px;
+@media (max-width: 992px) {
+  .mt-auto, .my-auto {
+    margin-top: 0 !important;
   }
+  body footer {
+    position: inherit;
+  }
+  body #heroscreen {
+    height: 90vh;
+  }
+}
+@media (max-width: 767px) {//medium
   body #heroscreen .title .title-left {
     // text-shadow: 5px 143px 25px #000;
     margin: 0;
@@ -128,9 +148,6 @@ body {
     // text-shadow: 5px 143px 25px #000;
     margin: 0;
     text-align: center;
-  }
-  .mt-auto, .my-auto {
-    margin-top: 0 !important;
   }
   .fullscreen-bg {
     // background: url('../img/mpi.background.png') center center / cover no-repeat;
@@ -149,4 +166,20 @@ body {
 }
 .top {
   padding: 16px;
+}
+// Animation
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes logo {
+  0%   {transform: translate3d(2px,0, 0);}
+  // 33%  {transform: translate3d(0px, 0, 0);}
+  50%  {transform: translate3d(0, 0, 0);}
+  100% {transform: translate3d(-2px,0, 0);}
+  animation-timing-function: linear;
+}
+@keyframes logo {
+  0%   {transform: translate3d(2px,0, 0);}
+  // 33%  {transform: translate3d(0px, 0, 0);}
+  50%  {transform: translate3d(0, 0, 0);}
+  100% {transform: translate3d(-2px,0, 0);}
+  animation-timing-function: linear;
 }
