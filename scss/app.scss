@@ -37,7 +37,7 @@ body {
         height: 100%;
         width: auto;
         animation-name: logo;
-        animation-duration: 0.5s;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
       }
@@ -170,16 +170,34 @@ body {
 // Animation
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes logo {
-  0%   {transform: translate3d(2px,0, 0);}
-  // 33%  {transform: translate3d(0px, 0, 0);}
-  50%  {transform: translate3d(0, 0, 0);}
-  100% {transform: translate3d(-2px,0, 0);}
-  animation-timing-function: linear;
+  0% {
+    transform: translate3d(1px,0px,0px);
+    filter: blur(1px);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translate3d(-1px,0px,0px);
+    filter: blur(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate3d(0px,0px,0px);
+    filter: blur(0px);
+  }
 }
 @keyframes logo {
-  0%   {transform: translate3d(2px,0, 0);}
-  // 33%  {transform: translate3d(0px, 0, 0);}
-  50%  {transform: translate3d(0, 0, 0);}
-  100% {transform: translate3d(-2px,0, 0);}
-  animation-timing-function: linear;
+  0% {
+    transform: translate3d(1px,0px,0px);
+    filter: blur(1px);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translate3d(-1px,0px,0px);
+    filter: blur(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate3d(0px,0px,0px);
+    filter: blur(0px);
+  }
 }
