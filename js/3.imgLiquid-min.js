@@ -1,0 +1,1 @@
+/home/josecaos/Documents/SYCSA/mpi/landing.mpi/node_modules/imgliquid/js/imgLiquid-min.js
